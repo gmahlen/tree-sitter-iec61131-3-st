@@ -56,6 +56,7 @@
 ; ---------------------------------------------------------------------------
 (program_declaration         name: (identifier) @function)
 (function_declaration        name: (identifier) @function)
+(action_declaration          name: (identifier) @function)
 (function_block_declaration  name: (identifier) @type)
 (interface_declaration       name: (identifier) @type)
 (method_declaration          name: (identifier) @function.method)
@@ -111,6 +112,7 @@
   "PROGRAM" "END_PROGRAM"
   "FUNCTION" "END_FUNCTION"
   "FUNCTION_BLOCK" "END_FUNCTION_BLOCK"
+  "ACTION" "END_ACTION"
   "INTERFACE" "END_INTERFACE"
   "METHOD" "END_METHOD"
   "PROPERTY" "END_PROPERTY"

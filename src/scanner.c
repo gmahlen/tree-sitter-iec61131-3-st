@@ -45,6 +45,7 @@ enum TokenType {
   END_NAMESPACE,
   END_CONFIGURATION,
   END_RESOURCE,
+  END_ACTION,
 };
 
 // Parallel to enum TokenType. Longest spellings come naturally; matching is by
@@ -70,6 +71,7 @@ static const char *const KEYWORDS[] = {
   "END_NAMESPACE",
   "END_CONFIGURATION",
   "END_RESOURCE",
+  "END_ACTION",
 };
 
 #define KEYWORD_COUNT ((int)(sizeof(KEYWORDS) / sizeof(KEYWORDS[0])))

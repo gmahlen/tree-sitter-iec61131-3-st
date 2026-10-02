@@ -74,6 +74,7 @@ export const TERMINATORS = [
   'END_NAMESPACE',
   'END_CONFIGURATION',
   'END_RESOURCE',
+  'END_ACTION',
 ];
 
 /**
@@ -925,6 +926,7 @@ export default grammar({
         $.namespace_declaration,
         $.configuration_declaration,
         $.global_var_declaration_block,
+        $.action_declaration,
       ),
 
     // §6.7.2 — PROGRAM
@@ -1131,5 +1133,17 @@ export default grammar({
 
     // Stand-alone VAR_GLOBAL block at top level (outside CONFIGURATION).
     global_var_declaration_block: ($) => $.var_global,
+
+    // ACTION
+    action_declaration: ($) =>
+      seq(
+        kw('ACTION'),
+        field('name', $.identifier),
+        ':',
+        repeat($._var_block),
+        field('body', optional($._statement_list)),
+        endkw($, 'END_ACTION'),
+      ),
+
   },
 });
