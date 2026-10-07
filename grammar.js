@@ -502,7 +502,7 @@ export default grammar({
 
     // 5.8 Structure type — §6.4.3.4
     structure_type_inline: ($) =>
-      seq(kw('STRUCT'), repeat1($.structure_field), endkw($, 'END_STRUCT')),
+      seq(kw('STRUCT'), repeat($.structure_field), endkw($, 'END_STRUCT')),
 
     structure_field: ($) =>
       seq(
@@ -1062,7 +1062,7 @@ export default grammar({
 
     // §6.7.5 — TYPE … END_TYPE
     type_declaration: ($) =>
-      seq(kw('TYPE'), repeat1($.type_definition), endkw($, 'END_TYPE')),
+      seq(kw('TYPE'), repeat($.type_definition), endkw($, 'END_TYPE')),
 
     type_definition: ($) =>
       seq(

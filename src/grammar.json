@@ -1762,7 +1762,7 @@
           "value": "STRUCT"
         },
         {
-          "type": "REPEAT1",
+          "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
             "name": "structure_field"
@@ -5426,7 +5426,7 @@
           "value": "TYPE"
         },
         {
-          "type": "REPEAT1",
+          "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
             "name": "type_definition"
