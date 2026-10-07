@@ -927,6 +927,7 @@ export default grammar({
         $.configuration_declaration,
         $.global_var_declaration_block,
         $.action_declaration,
+        $.var_block
       ),
 
     // §6.7.2 — PROGRAM
